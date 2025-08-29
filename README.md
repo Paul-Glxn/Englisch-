@@ -3,7 +3,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Staten Island — Immersive Digital Poster</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+<!-- Neue Schriftarten -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg: #0f172a;
@@ -32,7 +35,7 @@ body.light-mode {
 *{box-sizing:border-box;scroll-behavior:smooth;}
 body {
   margin:0; 
-  font-family: Inter, system-ui, sans-serif;
+  font-family: 'Nunito', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: background .6s, color .6s;
@@ -42,7 +45,7 @@ header { display:flex; align-items:center; gap:20px; margin:20px 0 30px 0; }
 header .emoji { font-size:56px; animation: float 3s ease-in-out infinite; }
 @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
 h1 { font-size: clamp(34px, 6vw, 68px); margin:0; line-height:1.05; font-family: "Playfair Display", serif; background: var(--gradient); -webkit-background-clip:text; color:transparent; }
-.subtitle { color: var(--muted); margin-top:8px; font-size:clamp(14px,2vw,20px); }
+.subtitle { color: var(--muted); margin-top:8px; font-size:clamp(14px,2vw,20px); font-family:'Nunito', sans-serif; }
 
 .hero-img { width:100%; max-height:480px; object-fit:cover; border-radius:24px; margin-bottom:28px; border:3px solid var(--accent); box-shadow: var(--shadow); transition: transform .5s; }
 .hero-img:hover { transform: scale(1.03); }
@@ -67,29 +70,31 @@ h1 { font-size: clamp(34px, 6vw, 68px); margin:0; line-height:1.05; font-family:
 .card h2 { 
   margin:0 0 14px 0; 
   font-size: clamp(20px, 3vw, 30px); 
+  font-family: "Playfair Display", serif;
   cursor:pointer; 
   display:flex; justify-content:space-between; align-items:center; 
   transition: color .3s, text-shadow .3s;
 }
 .card h2:hover { color: var(--accent); text-shadow: 0 0 12px var(--accent); }
-.card p, .card li { margin:0; color:var(--text); }
+.card p, .card li { margin:0; color:var(--text); font-family:'Nunito', sans-serif; }
 .list { margin-top:6px; padding:0; list-style:none; }
-.list li { background: rgba(15,23,42,.45); border:1px solid rgba(148,163,184,.15); padding:14px 16px; border-radius:16px; margin-bottom:10px; cursor:pointer; transition: all .3s; }
+.list li { background: rgba(15,23,42,.45); border:1px solid rgba(148,163,184,.15); padding:14px 16px; border-radius:16px; margin-bottom:10px; cursor:pointer; transition: all .3s; font-family:'Nunito', sans-serif; }
 .list li:hover { background: rgba(15,23,42,.65); transform: translateX(6px); }
 
-.translation { display:none; margin-top:6px; font-size:14px; color: var(--accent-2); }
+.translation { display:none; margin-top:6px; font-size:14px; color: var(--accent-2); font-family:'Nunito', sans-serif; }
 
 .gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:14px; }
 .gallery img { width:100%; height:220px; object-fit:cover; border-radius:16px; border:2px solid rgba(148,163,184,.25); transition: transform .4s, box-shadow .4s; }
 .gallery img:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(56,189,248,.5); }
 
-.toggle-dark { position:fixed; top:20px; right:20px; background: var(--gradient); color:#fff; padding:12px 18px; border:none; border-radius:999px; cursor:pointer; font-weight:700; box-shadow: var(--shadow); transition: transform .3s; z-index:1000; }
+.toggle-dark { position:fixed; top:20px; right:20px; background: var(--gradient); color:#fff; padding:12px 18px; border:none; border-radius:999px; cursor:pointer; font-weight:700; box-shadow: var(--shadow); transition: transform .3s; z-index:1000; font-family:'Nunito', sans-serif; }
 .toggle-dark:hover { transform: scale(1.05); }
 
 footer {
   text-align:center; margin:60px 0 30px; font-size:20px; font-weight:800;
   color: var(--neon); text-shadow: 0 0 10px var(--neon), 0 0 14px var(--neon);
   animation: flicker 2.5s infinite alternate;
+  font-family: "Playfair Display", serif;
 }
 @keyframes flicker { 0%{opacity:.8;} 100%{opacity:1;} }
 
@@ -104,6 +109,7 @@ footer {
   cursor:pointer; font-size:20px; font-weight:800; 
   box-shadow: var(--shadow); display:none; 
   transition: transform .3s;
+  font-family:'Nunito', sans-serif;
 }
 .back-to-top:hover { transform: scale(1.1); }
 
